@@ -3,15 +3,15 @@
 
 # Features 
  > login/signup page
-   -signup/ login form
-   -redirect to browser
+    - signup/ login form
+    - redirect to browser
  > Browse (after authentication)
-   - Header
-   -Main Movie
-      - Trailer in background
-      - Title & discription
-      - Movie suggestion
-      - Movie Lists !
+    - Header
+    -Main Movie
+        - Trailer in background
+        - Title & discription
+        - Movie suggestion
+        - Movie Lists !
  > movieFlix
     - Search Bar
     - Movie Suggestion
