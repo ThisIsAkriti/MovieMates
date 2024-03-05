@@ -1,5 +1,12 @@
 # MovieFlix 
  > Create React App
+ > Config tailwind CSS
+ > Header
+ > Routing of app
+ > Login Form
+ > Sign Up form 
+ > form Validation
+ > useRef Hook
 
 # Features 
  > login/signup page
