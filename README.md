@@ -7,6 +7,10 @@
  > Sign Up form 
  > form Validation
  > useRef Hook
+ > use of firebase
+ > deployed movieflix on firebase
+ > Creating SignUp user Account
+ > Set up redux store via redux slice
 
 # Features 
  > login/signup page

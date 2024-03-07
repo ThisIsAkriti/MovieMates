@@ -1,26 +1,72 @@
 
 import React, {useRef, useState } from 'react'
+import {useNavigate} from "react-router-dom"
 import Header from './Header';
 import bg_img2 from '../images/bg_img2.jpg'
 import { checkValidData } from '../utils/validate';
+import { createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from "firebase/auth";
+import {auth} from '../utils/firebase';
 
 const Login = () => {
-
+   
+  const navigate = useNavigate();
   const[isSignInForm , setIsSignInForm] = useState(true);
   const[errorMessage, setErrorMessage] = useState(null)  
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef(null);
 
-  const toggleSignUpForm = () => {
-    setIsSignInForm(!isSignInForm)
-  }
 
   const handleButtonClick = () => {
     // Validate the form data 
     
-    const message = checkValidData(name.current.value, email.current.value , password.current.value);
+    const message = checkValidData(email.current.value , password.current.value);
     setErrorMessage(message);
+    if(message) return;
+    
+    if(!isSignInForm){
+      // Do Sign Up
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value ,
+        password.current.value
+      )
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        console.log(user);
+        navigate("/browse")
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMessage(errorCode +" - "+ errorMessage);
+        navigate("/");
+      });
+    }
+    else{
+      // Do Sign In
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value ,
+        password.current.value)
+      .then((userCredential) => {
+        
+        const user = userCredential.user;
+        navigate("/browse")
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMessage(errorCode + "-" + errorMessage);
+        navigate("/");
+      });
+    }         
+  };
+
+  const toggleSignUpForm = () => {
+    setIsSignInForm(!isSignInForm)
   }
 
   return (
