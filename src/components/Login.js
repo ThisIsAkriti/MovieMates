@@ -1,20 +1,26 @@
-
 import React, {useRef, useState } from 'react'
 import {useNavigate} from "react-router-dom"
+import {updateProfile } from "firebase/auth";
 import Header from './Header';
-import bg_img2 from '../images/bg_img2.jpg'
+import bg_img3 from '../images/bg_img3.jpg'
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword ,  signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../utils/firebase';
+import { useDispatch } from 'react-redux';
+import {addUser } from "../utils/userSlice"
 
 const Login = () => {
    
   const navigate = useNavigate();
   const[isSignInForm , setIsSignInForm] = useState(true);
-  const[errorMessage, setErrorMessage] = useState(null)  
+  const[errorMessage, setErrorMessage] = useState(null);
+
+  const dispatch = useDispatch();
+
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
-  const name = useRef(null);
+  
 
 
   const handleButtonClick = () => {
@@ -32,10 +38,22 @@ const Login = () => {
         password.current.value
       )
       .then((userCredential) => {
-        // Signed up 
         const user = userCredential.user;
-        console.log(user);
-        navigate("/browse")
+
+        updateProfile(user, {
+          displayName: name.current.value , 
+          photoURL: "https://th.bing.com/th/id/OIP.h9Tm9XL_WtYQax_ApXOJXQHaLI?rs=1&pid=ImgDetMain"
+        })
+        
+        .then(() => {
+          const {uid , email , displayName , photoURL} = auth.currentUser;
+          dispatch(addUser({uid: uid, email: email, displayName: displayName , photoURL: photoURL}));
+          navigate("/browse");
+        })
+        .catch((error) => {
+          setErrorMessage(error.message)
+        });
+        
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -53,14 +71,12 @@ const Login = () => {
       .then((userCredential) => {
         
         const user = userCredential.user;
-        navigate("/browse")
-        console.log(user);
+       
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         setErrorMessage(errorCode + "-" + errorMessage);
-        navigate("/");
       });
     }         
   };
@@ -73,7 +89,7 @@ const Login = () => {
     <div>
       <div className='absolute'>
         <Header/>
-        <img src= {bg_img2} alt='Background'/>
+        <img src= {bg_img3} alt='backgroundImage'/>
       </div>
       
       <form  

@@ -11,6 +11,9 @@
  > deployed movieflix on firebase
  > Creating SignUp user Account
  > Set up redux store via redux slice
+ > Fixed Bug: signUp user displayname and profile picture update
+ > Fixed Bug: if the user is not logged in Redirect / browse to login page and vice-versa
+ > Unsubscribe to the onAuthStateChanged call back in header.js
 
 # Features 
  > login/signup page
