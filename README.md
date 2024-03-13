@@ -14,6 +14,14 @@
  > Fixed Bug: signUp user displayname and profile picture update
  > Fixed Bug: if the user is not logged in Redirect / browse to login page and vice-versa
  > Unsubscribe to the onAuthStateChanged call back in header.js
+ > Regestered for tmdb API and creat an app and get access token
+ > Get Data from TMDB "now playing" => movies list API 
+ > created hook and updated a store 
+ > creater custom hook for now Playing movies
+ > updated store 
+ > created moive slice
+ > fetched data for trailer video 
+ > created backgroung - Movie playing
 
 # Features 
  > login/signup page
