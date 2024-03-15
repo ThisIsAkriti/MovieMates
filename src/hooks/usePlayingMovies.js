@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addPlayingMovies } from '../utils/movieSlice';
 
 const usePlayingMovies = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const getPlayingMovies = async () => {
     const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1', API_options);

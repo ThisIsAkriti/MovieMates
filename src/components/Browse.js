@@ -3,13 +3,15 @@ import Header from './Header';
 import usePlayingMovies from '../hooks/usePlayingMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import usePopularMovies from '../hooks/usePopularMovies';
 
 const Browse = () => {
 //fetch data from tmdb api and update a store 
   usePlayingMovies();
+  usePopularMovies();
   
   return (
-    <div className='flex '>
+    <div>
       <Header/>
       <MainContainer/>
       <SecondaryContainer/>

@@ -22,6 +22,11 @@
  > created moive slice
  > fetched data for trailer video 
  > created backgroung - Movie playing
+ > Build Secondary Component!
+ > Build movieCard 
+ > added IMG CDN
+ > ui updates 
+ > fetched popular movies and now playing movies
 
 # Features 
  > login/signup page
