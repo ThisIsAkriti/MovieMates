@@ -27,6 +27,7 @@
  > added IMG CDN
  > ui updates 
  > fetched popular movies and now playing movies
+ > set up open ai in movieflix
 
 # Features 
  > login/signup page
