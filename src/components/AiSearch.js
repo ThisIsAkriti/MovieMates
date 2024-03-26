@@ -1,4 +1,4 @@
-import AiSearchBar from "./AiSearchBar";
+import AiSearchBar from './aiSearchBar';
 import bg_img3 from '../images/bg_img3.jpg';
 
 const AiSearch = () => {
@@ -7,8 +7,8 @@ const AiSearch = () => {
       <div className='absolute -z-10'>
         <img src= {bg_img3} alt='backgroundImage'/>
       </div>
-    <AiSearchBar/>
+      <AiSearchBar/>
     </div>
   )
 }
-export default AiSearch
+export default AiSearch;

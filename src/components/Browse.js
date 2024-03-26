@@ -30,7 +30,10 @@ const Browse = () => {
         showAiSearch ?
         ( <AiSearch/> )
          : 
-        ( <><MainContainer/> <SecondaryContainer/></> )
+        ( 
+        <>
+          <MainContainer/> <SecondaryContainer/>
+        </> )
       }
     </div>
   )
