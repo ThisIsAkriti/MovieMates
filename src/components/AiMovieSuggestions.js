@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import MovieList from "./MovieList"
 import { useSelector } from 'react-redux';
 
@@ -15,17 +14,3 @@ const AiMovieSuggestions = () => {
 }
 
 export default AiMovieSuggestions;
-
-=======
-import React from 'react'
-
-const aiMovieSuggestions = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default aiMovieSuggestions
->>>>>>> 5f4541f27e62b1ab4b4877d07eb074ed7887041a
