@@ -13,4 +13,10 @@ const AiMovieSuggestions = () => {
   </div>
 }
 
+<<<<<<< HEAD
 export default AiMovieSuggestions;
+=======
+export default AiMovieSuggestions;
+
+
+>>>>>>> 68bf24752841dd03bcfdcbb5a2949e84db2d4a61
