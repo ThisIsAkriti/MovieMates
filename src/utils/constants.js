@@ -13,6 +13,10 @@ export const SUPPORTED_LANGUAGES = [
   {identifier : "hn" , name : "Hindi"},
   {identifier : "sp" , name : "Spanish"},
   {identifier : "fr" , name : "French"}
+<<<<<<< HEAD
 ];
 
 export const OPENAI_KEY = process.env.REACT_APP_TMDB_KEY;
+=======
+]
+>>>>>>> 5f4541f27e62b1ab4b4877d07eb074ed7887041a
