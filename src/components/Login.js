@@ -115,7 +115,7 @@ const Login = () => {
 
         <button className='p-2 my-2 bg-red-600 w-full rounded-lg' onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"} </button>
 
-        <div className='my-4 cursor-pointer' onClick={toggleSignUpForm}>{isSignInForm ? "New to Netflix? Sign Up" : "Already Regestered? Sign In"}  Now.</div>
+        <div className='my-4 cursor-pointer' onClick={toggleSignUpForm}>{isSignInForm ? "New to Movieflix? Sign Up" : "Already Regestered? Sign In"}  Now.</div>
       </form>
     </div>
   )

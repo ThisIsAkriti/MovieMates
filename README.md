@@ -28,6 +28,9 @@
  > ui updates 
  > fetched popular movies and now playing movies
  > set up open ai in movieflix
+ > created ai search bar , ai Search page 
+ > set up * multi language feature
+  
 
 # Features 
  > login/signup page
