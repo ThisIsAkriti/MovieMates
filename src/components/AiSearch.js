@@ -1,4 +1,4 @@
-import AiSearchBar from './aiSearchBar';
+import AiSearchBar from './AiSearchBar';
 import bg_img3 from '../images/bg_img3.jpg';
 import AiMovieSuggestions from './AiMovieSuggestions';
 const AiSearch = () => {
