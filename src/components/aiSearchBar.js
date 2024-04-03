@@ -3,7 +3,7 @@ import gray_search_icon from '../images/gray_search_icon.png';
 import lang from '../utils/languageConstants';
 const AiSearchBar = () => {
   const langKey = useSelector(store => store.language.lang);
-  console.log(langKey);
+  
     return (
     <div className="pt-[10%]  flex justify-center">
       
