@@ -53,8 +53,8 @@ const Header = () => {
   };
 
   return (
-    <div className='absolute w-full h-16 z-10 bg-gradient-to-b from-black flex justify-between'>
-      <img className=' w-40 mt-4 ml-8 ' src={logo2} alt='Logo'/>
+    <div className='absolute w-full h-16 z-10 bg-gradient-to-b from-black md:flex justify-between '>
+      <img className='md:mx-0 w-40 mx-auto mt-4 ml-8 ' src={logo2} alt='Logo'/>
       {user &&            
         <div className='flex p-4'>
           
