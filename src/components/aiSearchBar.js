@@ -51,14 +51,14 @@ const AiSearchBar = () => {
     <div className="md:pt-[10%] pt-[35%] flex justify-center ">
       
       <form className=" bg-black bg-opacity-80 p-4 mx-6 grid grid-cols-12
-      rounded-md w-full md:w-1/2 " onSubmit={(e) => e.preventDefault()}>
+      rounded-md w-full md:w-1/2 overflow-hidden " onSubmit={(e) => e.preventDefault()}>
  
         <input type="text"
         ref={searchText}
         placeholder={lang[langKey].aiSearchPlaceholder}
         className=" col-span-8 px-6 py-2 m-2 rounded-lg  outline-none  bg-gray-100" 
         />
-        <img className='mt-[18%]  ml-[-50px]  size-8' src={gray_search_icon} alt="search"/>
+        <img className='md:mt-[18%] md:ml-[-50px] md:size-8 mt-[45%] ml-[-110%] size-6' src={gray_search_icon} alt="search"/>
         <button className='px-4 my-2 bg-red-600 rounded-lg col-span-3 ml-[-20px]'
          onClick={handleAiSearch}>
         {lang[langKey].search}</button>  

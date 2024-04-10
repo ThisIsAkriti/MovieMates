@@ -54,9 +54,9 @@ const Header = () => {
 
   return (
     <div className='absolute w-full h-16 z-10 bg-gradient-to-b from-black md:flex justify-between '>
-      <img className='md:mx-0 w-40 mx-auto mt-4 ml-8 ' src={logo2} alt='Logo'/>
+      <img className='md:mx-4 w-40 mx-auto mt-4 ml-8 ' src={logo2} alt='Logo'/>
       {user &&            
-        <div className='flex p-4'>
+        <div className='flex md:p-4 pl-8 pt-4'>
           
           <select className="pl-2 pb-1 bg-black outline-none border border-purple-700  text-white font-bold rounded-sm shadow-md shadow-purple-900 hover:bg-purple-800
            hover:shadow-none"
@@ -75,17 +75,17 @@ const Header = () => {
           
           <button
           onClick={handleAISearchClick}
-          className="bg-transparent hover:bg-purple-800 text-white font-semibold
+          className="md:bg-transparent bg-black hover:bg-purple-800 text-white font-semibold
            hover:text-white  px-2 mx-4 border border-purple-700 flex items-center
             hover:border-transparent rounded active:bg-blue-700  active:border-blue-800 shadow-purple-700  shadow-md active:shadow-none">
               <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/>
               ai</button>
 
           <img 
-          className=' w-10 object-cover h-full rounded-full mr-2' 
+          className=' md:w-10 w-6 object-cover h-full rounded-full mr-2' 
           src= {user?.photoURL} alt='user'/>
           
-          <button className='font-semibold text-white' onClick={handleSignOut}>Sign Out</button>
+          <button className='font-semibold text-white bg-black px-2 border rounded shadow-purple-700  shadow-md border-purple-700' onClick={handleSignOut}>Sign Out</button>
         </div>
       }
 

@@ -6,7 +6,7 @@ const AiMovieSuggestions = () => {
  
  if(!movieNames) return null; // show shimmer ui in place of null
 
- return <div className='p-4 m-4  bg-black text-white bg-opacity-80 absolute'>
+ return <div className='p-4 m-4 mx-6 rounded-lg bg-black relative text-white bg-opacity-80 '>
     <div>
       {movieNames.map((movieName , index) => (<MovieList key={movieName} title = {movieName} movies = {movieResults[index]}/>))}
     </div>
