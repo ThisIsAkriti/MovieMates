@@ -48,7 +48,7 @@ const AiSearchBar = () => {
   }
 
   return (
-    <div className="md:pt-[10%] pt-[35%] flex justify-center ">
+    <div className="md:pt-[10%] pt-[40%] flex justify-center ">
       
       <form className=" bg-black bg-opacity-80 p-4 mx-6 grid grid-cols-12
       rounded-md w-full md:w-1/2 overflow-hidden " onSubmit={(e) => e.preventDefault()}>

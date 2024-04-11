@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     <div className='absolute w-full h-16 z-10 bg-gradient-to-b from-black md:flex justify-between '>
-      <img className='md:mx-4 w-40 mx-auto mt-4 ml-8 ' src={logo2} alt='Logo'/>
+      <img className='md:mx-4 w-40 mx-auto mt-4 ml-8' src={logo2} alt='Logo'/>
       {user &&            
         <div className='flex md:p-4 pl-8 pt-4'>
           
@@ -82,10 +82,10 @@ const Header = () => {
               ai</button>
 
           <img 
-          className=' md:w-10 w-6 object-cover h-full rounded-full mr-2' 
+          className=' md:w-10 w-6 object-cover h-full rounded-full mr-2 md:visible lg:visible xl:visible 2xl:visible invisible' 
           src= {user?.photoURL} alt='user'/>
           
-          <button className='font-semibold text-white bg-black px-2 border rounded shadow-purple-700  shadow-md border-purple-700' onClick={handleSignOut}>Sign Out</button>
+          <button className=' -ml-8 md:-ml-0 lg:-ml-0 xl:-ml-0 2xl:-ml-0  font-semibold text-white bg-black px-2 border rounded shadow-purple-700 shadow-md border-purple-700' onClick={handleSignOut}>Sign Out</button>
         </div>
       }
 

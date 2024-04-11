@@ -5,9 +5,9 @@ const AiSearch = () => {
   return (
     <>
       <div className='fixed -z-10 '>
-          <img className='h-screen lg:h-min md:h-screen object-cover xl:h-min' src= {bg_img3} alt='backgroundImage'/>
+          <img className='h-screen lg:h-screen lg:w-screen md:h-screen object-cover xl:h-screen 2xl:h-screen 2xl:w-screen' src= {bg_img3} alt='backgroundImage'/>
         </div>
-      <div className=''>
+      <div>
         <AiSearchBar/>
         <AiMovieSuggestions/>
       </div>
