@@ -94,8 +94,8 @@ const Login = () => {
       
       <form  
       onSubmit={(e)=> e.preventDefault()}
-      className='absolute rounded-lg sm:w-6/12 md:w-4/12 lg:w-3/12 2xl:w-2/12 w-7/12 p-12 bg-black bg-opacity-90
-      my-36 mx-auto right-0 left-0 text-white'>
+      className='absolute rounded-lg sm:w-6/12 md:w-4/12 lg:w-3/12 2xl:w-2/12 w-7/12 p-8 px-12 bg-black bg-opacity-90
+      my-28 mx-auto right-0 left-0 text-white'>
                
         <h1 className=' font-bold text-2xl py-4'>{isSignInForm ? "Sign In" : "Sign Up"} </h1>
         
