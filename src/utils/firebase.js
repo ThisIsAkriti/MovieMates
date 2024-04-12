@@ -3,6 +3,7 @@
 
 import { getAuth } from "firebase/auth";
 
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -11,13 +12,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAkuO73e23aBLd0va_JRoNu3PusjopqMaE",
-  authDomain: "movieflix-c87f5.firebaseapp.com",
-  projectId: "movieflix-c87f5",
-  storageBucket: "movieflix-c87f5.appspot.com",
-  messagingSenderId: "879058279875",
-  appId: "1:879058279875:web:a24db13f50a18d9ab4f176",
-  measurementId: "G-8RY35J3042"
+  apiKey: "AIzaSyAMq80OUIxxQwm_XL7dEh9TIPQMfoZ25X4",
+  authDomain: "movieflix-bbba0.firebase.app",
+  projectId: "movieflix-bbba0",
+  storageBucket: "movieflix-bbba0.appspot.com",
+  messagingSenderId: "677768773126",
+  appId: "1:677768773126:web:042a4cdf5ff0a551434d87",
+  measurementId: "G-JLGD9JEB9E"
 };
 
 // Initialize Firebase
