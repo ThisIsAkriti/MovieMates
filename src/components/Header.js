@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
 import {useNavigate} from "react-router-dom";
 import { signOut } from "firebase/auth";
@@ -16,6 +16,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector(store => store.user);
+  const [isAi, setIsAi] = useState(true);
 
   const handleSignOut = () => {  
     signOut(auth)
@@ -45,6 +46,7 @@ const Header = () => {
 
   const handleAISearchClick = () => {
     //ai search functionality
+    setIsAi(!isAi);
     dispatch(toggleAiSearchView());
   }
 
@@ -78,8 +80,8 @@ const Header = () => {
           className="md:bg-transparent bg-black hover:bg-purple-800 text-white font-semibold
            hover:text-white  px-2 mx-4 border border-purple-700 flex items-center
             hover:border-transparent rounded active:bg-blue-700  active:border-blue-800 shadow-purple-700  shadow-md active:shadow-none">
-              <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/>
-              ai</button>
+              {isAi? <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/> : null}
+              {isAi ? "ai"  : "home"}</button>
 
           <img 
           className=' md:w-10 w-6 object-cover h-full rounded-full mr-2 md:visible lg:visible xl:visible 2xl:visible invisible' 
