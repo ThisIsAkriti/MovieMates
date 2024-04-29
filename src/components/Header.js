@@ -81,7 +81,7 @@ const Header = () => {
            hover:text-white  px-2 mx-4 border border-purple-700 flex items-center
             hover:border-transparent rounded active:bg-blue-700  active:border-blue-800 shadow-purple-700  shadow-md active:shadow-none">
               {isAi? <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/> : null}
-              {isAi ? "ai"  : "home"}</button>
+              {isAi ? "ai"  : "Home"}</button>
 
           <img 
           className=' md:w-10 w-6 object-cover h-full rounded-full mr-2 md:visible lg:visible xl:visible 2xl:visible invisible' 
