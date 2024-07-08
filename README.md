@@ -29,14 +29,19 @@
  - ui updates 
  - fetched popular movies and now playing movies
  - set up open ai in movieflix
- - created ai search bar , ai Search page 
- - set up * multi language feature
+ - created ai search bar , ai Search page
+- set up * multi language feature
+   ##### (open ai search bar is non functional because of some billing issue created due to minimum search quota exceeded!) 
+
   
 
 ## Features 
  ###  login/signup page
     - signup/ login form
     - redirect to browser
+
+   ![alt text](public/loginImg.png) 
+
  ### Browse (after authentication)
     - Header
      -Main Movie
@@ -46,3 +51,5 @@
         * Movie Lists !
         - Search Bar
         - Movie Suggestion
+   ![alt text](public/browse.png)     
+
