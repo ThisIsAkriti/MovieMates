@@ -55,7 +55,7 @@ const Header = () => {
   };
 
   return (
-    <div className='absolute w-screen h-16 z-10  md:flex justify-between '>
+    <div className='absolute w-full h-16 z-10  md:flex justify-between '>
       <img className='md:mx-4 w-40 mx-auto mt-4 ml-8' src={logo2} alt='Logo'/>
       {user &&            
         <div className='flex md:p-4 pl-8 pt-4'>
