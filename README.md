@@ -51,5 +51,9 @@
         * Movie Lists !
         - Search Bar
         - Movie Suggestion
-   ![alt text](public/browse.png)     
+   ![alt text](public/browse.png)  
 
+ ## Search any Movie   
+   - It searches and give all possible Movies based on your searched input.
+
+  ![alt text](public/aiPage.png)
