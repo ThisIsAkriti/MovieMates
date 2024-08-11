@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <div className='absolute w-full h-16 z-10  md:flex justify-between bg-black opacity-85 rounded-br-lg rounded-bl-lg'>
-      <img className='md:mx-4 w-44 mt-4 ml-4 mx-auto mb-2' src='/myLogo.svg' alt='Logo'/>
+      <img className='md:mx-4 w-32 md:w-44 mt-4 ml-4 mx-auto mb-2' src='/myLogo.svg' alt='Logo'/>
       {user &&            
         <div className='flex md:p-4 pl-8 pt-4'>
           
@@ -82,7 +82,7 @@ const Header = () => {
               {isAi? <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/> : null}
               {isAi ? "ai"  : "Home"}</button>
           
-          <button className=' -ml-8 md:-ml-0 lg:-ml-0 xl:-ml-0 2xl:-ml-0  font-semibold text-white bg-black px-2 border rounded shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 bg-opacity-90 hover:bg-opacity-90 ' onClick={handleSignOut}>Sign Out</button>
+          <button className=' md:-ml-0 lg:-ml-0 xl:-ml-0 2xl:-ml-0  font-semibold text-white bg-black px-2 border rounded shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 bg-opacity-90 hover:bg-opacity-90 ' onClick={handleSignOut}>Sign Out</button>
           <img 
           className=' md:w-10 w-6 object-cover h-full rounded-full ml-4 md:visible lg:visible xl:visible 2xl:visible invisible' 
           src= {user?.photoURL} alt='user'/>
