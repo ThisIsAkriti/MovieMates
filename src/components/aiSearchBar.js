@@ -25,6 +25,7 @@ const AiSearchBar = () => {
   
 
   const handleAiSearch = async() => {
+    
     console.log(searchText.current.value);
 
     const aiQuery = "Act as a movie recommendation system and suggest some movies fro the query: " + searchText.current.value + ". only give me name of 5 movies, comma separared like example : Free guy, animal , fukrey , P.K , whisker away";
@@ -44,11 +45,12 @@ const AiSearchBar = () => {
 
     dispatch(
       addAiMovieResults({movieNames: aiMovies ,movieResults: tmdbResults})
+      
     );
   }
 
   return (
-    <div className="md:pt-[10%] pt-[40%] flex justify-center ">
+    <div className="flex  justify-center md:pt-[10%] pt-[40%] absolute w-full ">
       
       <form className=" bg-black bg-opacity-80 p-4 mx-6 grid grid-cols-12
       rounded-md w-full md:w-1/2 overflow-hidden " onSubmit={(e) => e.preventDefault()}>

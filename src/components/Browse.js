@@ -24,7 +24,7 @@ const Browse = () => {
   useOnTheAir();
   
   return (
-    <div>
+    <div className=''>
       <Header/>
       {
         showAiSearch ?

@@ -16,3 +16,6 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+
+export const api_Key = process.env.REACT_APP_Movie_Search_Api
+
