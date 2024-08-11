@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import {useNavigate} from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import logo2 from '../images/logo2.jpeg';
 import { useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser , removeUser } from "../utils/userSlice";
@@ -50,17 +49,17 @@ const Header = () => {
     dispatch(toggleAiSearchView());
   }
 
-  const handleLangChange = (e) => {
-    dispatch(changeLanguage(e.target.value));
-  };
+  //const handleLangChange = (e) => {
+  //  dispatch(changeLanguage(e.target.value));
+  //};
 
   return (
-    <div className='absolute w-full h-16 z-10  md:flex justify-between '>
-      <img className='md:mx-4 w-40 mx-auto mt-4 ml-8' src={logo2} alt='Logo'/>
+    <div className='absolute w-full h-16 z-10  md:flex justify-between bg-black opacity-85 rounded-br-lg rounded-bl-lg'>
+      <img className='md:mx-4 w-44 mt-4 ml-4 mx-auto mb-2' src='/myLogo.svg' alt='Logo'/>
       {user &&            
         <div className='flex md:p-4 pl-8 pt-4'>
           
-          <select className="pl-2 pb-1 bg-black outline-none border border-purple-700 text-white font-bold rounded-sm shadow-md shadow-purple-900 hover:bg-purple-800
+          {/*<select className="pl-2 pb-1 bg-black outline-none border border-purple-700 text-white font-bold rounded-sm shadow-md shadow-purple-900 hover:bg-purple-800
            hover:shadow-none bg-opacity-80 hover:bg-opacity-80 "
            
            onChange={handleLangChange}
@@ -73,7 +72,7 @@ const Header = () => {
              {lang.name}
             </option>)}
 
-          </select>
+          </select>*/}
           
           <button
           onClick={handleAISearchClick}
@@ -82,12 +81,11 @@ const Header = () => {
             hover:border-transparent rounded active:bg-blue-700  active:border-blue-800 shadow-purple-700  shadow-md active:shadow-none">
               {isAi? <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/> : null}
               {isAi ? "ai"  : "Home"}</button>
-
-          <img 
-          className=' md:w-10 w-6 object-cover h-full rounded-full mr-2 md:visible lg:visible xl:visible 2xl:visible invisible' 
-          src= {user?.photoURL} alt='user'/>
           
           <button className=' -ml-8 md:-ml-0 lg:-ml-0 xl:-ml-0 2xl:-ml-0  font-semibold text-white bg-black px-2 border rounded shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 bg-opacity-90 hover:bg-opacity-90 ' onClick={handleSignOut}>Sign Out</button>
+          <img 
+          className=' md:w-10 w-6 object-cover h-full rounded-full ml-4 md:visible lg:visible xl:visible 2xl:visible invisible' 
+          src= {user?.photoURL} alt='user'/>
         </div>
       }
 
