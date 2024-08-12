@@ -22,10 +22,10 @@ const SearchMovie = () => {
         <>
             <div className="flex  justify-center md:pt-[10%] pt-[40%] absolute w-full  ">
                 <div className="bg-black bg-opacity-80 p-4 mx-6 grid grid-cols-12 rounded-md w-full md:w-1/2 overflow-hidden">
-                    <input className="col-span-8 px-6 py-2 m-2 rounded-lg  outline-none  bg-gray-100" type="text" placeholder="Enter Movie Name!" value={search} 
+                    <input className="col-span-8 px-6 py-2 m-2 rounded-lg  outline-none shadow-md shadow-gray-700 bg-gray-100" type="text" placeholder="Enter Movie Name!" value={search} 
                     onChange={(e) => setSearch(e.target.value)} />
                     <img className='lg:mt-[18%] md:mt-[34%] md:ml-[-50px] md:size-8 mt-[45%] ml-[-110%] size-6' src={gray_search_icon} alt="search"/>
-                    <button className="px-4 my-2 bg-red-600 rounded-lg col-span-3 ml-[-20px]" onClick={()=>searchMovie(search)}>Search</button>
+                    <button className="px-4 my-2 bg-purple-800 rounded-lg col-span-3 ml-[-20px] font-semibold text-white active:bg-purple-700 shadow-md shadow-purple-900 active:shadow-sm" onClick={()=>searchMovie(search)}>Search</button>
                 </div>
             </div>
 
