@@ -11,7 +11,6 @@ const movieSlice = createSlice({
         series: null,
         onTheAir: null,
         trailerVideo : null
-       
     },
     reducers : {
         addPlayingMovies : (state , action) => {

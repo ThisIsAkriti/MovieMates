@@ -9,7 +9,7 @@ const MovieCards = ({movie : {Poster , Year , Type, Title , imdbId}}) => {
           <div className="p-2">
               <p className="text-sm">{Year}</p>
               <span className="text-sm">{Type}</span>
-              <h3 className="font-semibold text-white w-40 line-clamp-1 ">{Title}</h3>
+              <h3 className="font-semibold text-white w-40 ">{Title}</h3>
           </div>
       </div>
         

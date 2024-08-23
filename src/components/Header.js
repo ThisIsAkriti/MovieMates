@@ -8,9 +8,9 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser , removeUser } from "../utils/userSlice";
 import search_icon from "../images/search_icon.png"
 import { toggleAiSearchView } from "../utils/aiSearchSlice";
-import { SUPPORTED_LANGUAGES } from "../utils/constants";
-import { changeLanguage } from "../utils/languageSlice";
-//import user from '../images/user.png'
+//import { SUPPORTED_LANGUAGES } from "../utils/constants";
+//import { changeLanguage } from "../utils/languageSlice";
+
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

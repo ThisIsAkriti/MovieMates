@@ -7,11 +7,10 @@ const MainContainer = () => {
     if(!movies) return <Shimer/> ;
     const mainMovie = movies[0];
     
-
     const {original_title , overview , id} = mainMovie;
     return (
     <div className=" pt-[20%] sm:pt-[10%] md:pt-0 bg-black w-screen ">
-        <VideoTitle title = { original_title} overview = {overview}/>
+        <VideoTitle movieId={id} title = { original_title} overview = {overview}/>
         <VideoBackground movieId = {id}/>
     </div>
     );
