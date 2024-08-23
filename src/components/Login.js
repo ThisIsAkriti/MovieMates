@@ -42,7 +42,7 @@ const Login = () => {
 
         updateProfile(user, {
           displayName: name.current.value , 
-          photoURL: "https://th.bing.com/th/id/OIP.h9Tm9XL_WtYQax_ApXOJXQHaLI?rs=1&pid=ImgDetMain"
+          photoURL: "./photo.png"
         })
         
         .then(() => {
