@@ -29,7 +29,7 @@ const MovieList = ({title , movies}) => {
   const reviewsData = useReview(selectedMovieId)
 
   return (
-    <div className='px-6'>
+    <div className=' px-4 sm:bg-transparent bg-black -mt-10 sm:mt-0'>
       <h1 className='text-2xl font-semibold py-2'>{title}</h1>
       <div className='flex  overflow-x-scroll no-scrollbar'>
         <div className='flex'>

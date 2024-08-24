@@ -25,12 +25,11 @@ const VideoTitle = ({title , overview , movieId}) => {
   }
   
   return (
-    <div className=' pt-[24%] xl:pt-[14%] lg:pt-[18%]  px-12 absolute text-white bg-gradient-to-r from-black w-screen aspect-video '>
+    <div className=' pt-[24%] xl:pt-[14%] lg:pt-[18%]  px-12 absolute text-white bg-gradient-to-r from-black w-screen aspect-video md:mt-0 -mt-10 '>
       <h1 className=' xl:text-4xl lg:text-3xl text-xl font-bold mb-4 xl:mb-0'>{title}</h1>
       <p className='hidden xl:inline-block py-6 text-lg w-1/3'>{overview}</p>
-
       
-      <div className='flex'>
+      <div className='flex '>
         <button
         onClick={handleClickPlay} 
         className='flex items-center bg-gray-100 font-semibold text-black xl:px-4 px-3 py-2 border-purple-600 border rounded-lg mr-4 hover:bg-purple-400 hover:bg-opacity-80 hover:shadow-md hover:shadow-purple-800 hover:border-none'>
