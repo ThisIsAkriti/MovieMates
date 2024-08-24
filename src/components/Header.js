@@ -54,10 +54,10 @@ const Header = () => {
   //};
 
   return (
-    <div className='absolute w-full h-16 z-10 flex bg-black opacity-85 rounded-br-lg rounded-bl-lg justify-between'>
-      <img className='md:mx-4 w-32 md:w-44 mt-4 ml-4 mx-auto mb-2' src='/myLogo.svg' alt='Logo'/>
+    <div className=' sticky top-1 w-[98%] mx-auto h-16 flex rounded-lg justify-between z-50'>
+      <img className='md:w-44 w-36 p-2 mb-2  bg-black rounded-lg opacity-85' src='/myLogo.svg' alt='Logo'/>
       {user &&            
-        <div className='flex p-4 items-center'>
+        <div className='flex md:p-4 items-center'>
           
           {/*<select className="pl-2 pb-1 bg-black outline-none border border-purple-700 text-white font-bold rounded-sm shadow-md shadow-purple-900 hover:bg-purple-800
            hover:shadow-none bg-opacity-80 hover:bg-opacity-80 "
@@ -78,14 +78,14 @@ const Header = () => {
           onClick={handleAISearchClick}
           className=" bg-black bg-opacity-90 hover:bg-opacity-90 hover:bg-purple-800 text-white font-semibold
            hover:text-white  px-2 mx-4 py-1 border border-purple-700 flex items-center
-            hover:border-transparent rounded active:bg-blue-700  active:border-blue-800 shadow-purple-700  shadow-md active:shadow-none">
+            hover:border-transparent rounded active:bg-blue-700  active:border-blue-800 shadow-purple-700  shadow-md active:shadow-none overflow-x-hidden line-clamp-1">
             {isAi? <img className="mr-2 size-4" src={search_icon} alt="Search_icon"/> : null}
             {isAi ? "ai"  : "Home"}
           </button>
           
-          <button className=' md:-ml-0 lg:-ml-0 xl:-ml-0 2xl:-ml-0 py-1 font-semibold text-white bg-black px-2 border rounded shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 bg-opacity-90 hover:bg-opacity-90 ' onClick={handleSignOut}>Sign Out</button>
+          <button className=' md:mr-0 -mr-10 py-1 font-semibold text-white bg-black px-2 border rounded shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 bg-opacity-90 hover:bg-opacity-90 overflow-x-hidden line-clamp-1 ' onClick={handleSignOut}>Sign Out</button>
           <img 
-          className=' w-10 h-10 border shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 object-cover rounded-full ml-4 md:mr-4' 
+          className=' w-10 h-10 border shadow-purple-700 shadow-md border-purple-700 hover:bg-purple-700 object-cover rounded-full ml-4 md:mr-4 md:visible invisible' 
           src= {user?.photoURL} alt='user'/>
         </div>
       }
