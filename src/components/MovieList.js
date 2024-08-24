@@ -29,14 +29,14 @@ const MovieList = ({title , movies}) => {
   const reviewsData = useReview(selectedMovieId)
 
   return (
-    <div className=' px-4 sm:bg-transparent bg-black -mt-10 sm:mt-0'>
+    <div className=' px-4 sm:bg-transparent bg-black -mt-14 sm:mt-0'>
       <h1 className='text-2xl font-semibold py-2'>{title}</h1>
       <div className='flex  overflow-x-scroll no-scrollbar'>
         <div className='flex'>
           {movies?.map((movie) => 
           <div key={movie.id}>
             <MovieCard posterPath = {movie.poster_path}/>
-            <div className='flex relative mb-10 -mt-16 ml-4'>
+            <div className='flex relative sm:mb-10 mb-20 -mt-16 ml-4'>
               <button
               onClick={() => handlePlay(movie)}
                 className='flex items-center bg-gray-100 font-semibold text-black py-1 px-1 border-purple-600 border rounded-lg mr-2 hover:bg-purple-200 hover:bg-opacity-80'>
